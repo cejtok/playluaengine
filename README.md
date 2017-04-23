@@ -1,4 +1,4 @@
-# playluaengine - A Lua Engine to create 3D Games with Arduino
+# PlayLua Engine
 
 Copyright (C) 2017 Carlos E. Jimenez.
 
