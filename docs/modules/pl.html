@@ -1,0 +1,3934 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>PlayLua Engine</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>PlayLua Engine</h1>
+
+<ul>
+  <li><a href="../index.html">Index</a></li>
+</ul>
+
+<h2>Contents</h2>
+<ul>
+<li><a href="#SCREEN">SCREEN </a></li>
+<li><a href="#KEYBOARD">KEYBOARD </a></li>
+<li><a href="#MOUSE">MOUSE </a></li>
+<li><a href="#AUDIO">AUDIO </a></li>
+<li><a href="#ARDUINO">ARDUINO </a></li>
+<li><a href="#CHRONOMETER">CHRONOMETER </a></li>
+<li><a href="#FRAME_CHRONOMETER">FRAME CHRONOMETER </a></li>
+<li><a href="#FPS_COUNTER">FPS COUNTER </a></li>
+<li><a href="#PERSPECTIVE">PERSPECTIVE </a></li>
+<li><a href="#BODIES">BODIES </a></li>
+<li><a href="#FORMS">FORMS </a></li>
+<li><a href="#FORMATAS">FORMATAS </a></li>
+<li><a href="#ANIMATIONS">ANIMATIONS </a></li>
+<li><a href="#ANIMATAS">ANIMATAS </a></li>
+<li><a href="#GL2D">GL2D </a></li>
+<li><a href="#BOX">BOX </a></li>
+<li><a href="#DIALOG">DIALOG </a></li>
+<li><a href="#FUNCTIONS">FUNCTIONS </a></li>
+<li><a href="#DRAWING_FUNCTIONS">DRAWING FUNCTIONS </a></li>
+</ul>
+
+
+<h2>Modules</h2>
+<ul class="$(kind=='Topics' and '' or 'nowrap'">
+  <li><a href="../modules/math.html">math</a></li>
+  <li><strong>pl</strong></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+<h1>Module <code>pl</code></h1>
+<p>PlayLua Engine is an Engine to create 3D games or interactive Windows applications with Arduino.</p>
+<p></p>
+    <h3>Info:</h3>
+    <ul>
+        <li><strong>Author</strong>: Carlos E. Jimenez (cejtok@gmail.com)</li>
+    </ul>
+
+
+<h2><a href="#SCREEN">SCREEN </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#lu.screen">lu.screen</a></td>
+	<td class="summary">This object represents the Screen.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.screen:init">lu.screen:init ()</a></td>
+	<td class="summary">Initializes the attributes of <a href="../modules/pl.html#lu.screen">lu.screen</a>.</td>
+	</tr>
+</table>
+<h2><a href="#KEYBOARD">KEYBOARD </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#lu.keyboard">lu.keyboard</a></td>
+	<td class="summary">This object represents the Keyboard.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.keyboard:init">lu.keyboard:init ()</a></td>
+	<td class="summary">Initializes the attributes of <a href="../modules/pl.html#lu.keyboard">lu.keyboard</a>.</td>
+	</tr>
+</table>
+<h2><a href="#MOUSE">MOUSE </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#lu.mouse">lu.mouse</a></td>
+	<td class="summary">This object represents the Mouse.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.mouse:init">lu.mouse:init ()</a></td>
+	<td class="summary">Initializes the attributes of <a href="../modules/pl.html#lu.mouse">mouse</a>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.mouse:getPos">lu.mouse:getPos ()</a></td>
+	<td class="summary">Gets the position of the mouse cursor.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.mouse:setPos">lu.mouse:setPos (x, y)</a></td>
+	<td class="summary">Sets the position of the mouse cursor.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.mouse:center">lu.mouse:center ()</a></td>
+	<td class="summary">Sets the position of the mouse cursor in the center of the screen.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.mouse:getMotion">lu.mouse:getMotion ()</a></td>
+	<td class="summary">Gets the mouse cursor displacement since the last call to this function.</td>
+	</tr>
+</table>
+<h2><a href="#AUDIO">AUDIO </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#lu.audio">lu.audio</a></td>
+	<td class="summary">This object represents the audio system of the Engine.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.audio:load">lu.audio:load (filename)</a></td>
+	<td class="summary">Loads a Sound from a file.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TSound">TSound</a></td>
+	<td class="summary">Type of a Sound.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TSound:adjust">TSound:adjust (loop, vol, pan, frec)</a></td>
+	<td class="summary">Adjusts the parameters of the Sound.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TSound:play">TSound:play (loop, vol, pan, frec)</a></td>
+	<td class="summary">Plays the Sound.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TSound:adjust3D">TSound:adjust3D (loop, x, y, z, db)</a></td>
+	<td class="summary">Adjusts the parameters of the Sound for 3D effect.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TSound:play3D">TSound:play3D (loop, x, y, z, db)</a></td>
+	<td class="summary">Plays the Sound with 3D effect.</td>
+	</tr>
+</table>
+<h2><a href="#ARDUINO">ARDUINO </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#lu.arduino">lu.arduino</a></td>
+	<td class="summary">This object represents the Arduino.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.arduino.pinMode">lu.arduino.pinMode (pin, mode)</a></td>
+	<td class="summary">Configures the specified pin to behave either as an input or an output.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.arduino.analogWrite">lu.arduino.analogWrite (pin, value)</a></td>
+	<td class="summary">Writes an analog value (PWM wave) to a pin.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.arduino.analogRead">lu.arduino.analogRead (pin)</a></td>
+	<td class="summary">Reads the value from the specified analog pin.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.digitalWrite">lu.digitalWrite (pin, value)</a></td>
+	<td class="summary">Write a HIGH or a LOW value to a digital pin.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.digitalRead">lu.digitalRead (pin)</a></td>
+	<td class="summary">Reads the value from a specified digital pin, either HIGH or LOW.</td>
+	</tr>
+</table>
+<h2><a href="#CHRONOMETER">CHRONOMETER </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#lu.chrono">lu.chrono</a></td>
+	<td class="summary">This object represents the chronometer.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.chrono:reset">lu.chrono:reset ()</a></td>
+	<td class="summary">Reset chronometer.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.chrono:time">lu.chrono:time ()</a></td>
+	<td class="summary">Get the seconds elapsed.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.chrono:pause">lu.chrono:pause ()</a></td>
+	<td class="summary">Pause chronometer.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.chrono:start">lu.chrono:start ()</a></td>
+	<td class="summary">Start chronometer.</td>
+	</tr>
+</table>
+<h2><a href="#FRAME_CHRONOMETER">FRAME CHRONOMETER </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#lu.framechrono">lu.framechrono</a></td>
+	<td class="summary">This object represents the frame-chronometer.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.framechrono:reset">lu.framechrono:reset (timejump)</a></td>
+	<td class="summary">Reset the frame-chronometer.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.framechrono:time">lu.framechrono:time ()</a></td>
+	<td class="summary">Get the seconds elapsed.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.framechrono:pause">lu.framechrono:pause ()</a></td>
+	<td class="summary">Pause the frame-chronometer.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.framechrono:start">lu.framechrono:start ()</a></td>
+	<td class="summary">Start the frame-chronometer.</td>
+	</tr>
+</table>
+<h2><a href="#FPS_COUNTER">FPS COUNTER </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#lu.fpscounter">lu.fpscounter</a></td>
+	<td class="summary">This object represents the Counter of FPS(frames per second).</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.fpscounter:reset">lu.fpscounter:reset ()</a></td>
+	<td class="summary">Reset FPS counter.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.fpscounter:watch">lu.fpscounter:watch ()</a></td>
+	<td class="summary">Get the frames per second.</td>
+	</tr>
+</table>
+<h2><a href="#PERSPECTIVE">PERSPECTIVE </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#lu.perspective">lu.perspective</a></td>
+	<td class="summary">This object represents the Perspective.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.perspective:setCamera">lu.perspective:setCamera (cam)</a></td>
+	<td class="summary">Set the Perspective Camera.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.perspective:setFrustum">lu.perspective:setFrustum (fovy, near, far)</a></td>
+	<td class="summary">Set the Frustum.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.perspective:setLook">lu.perspective:setLook (x, y, z, alpha, beta, dist)</a></td>
+	<td class="summary">Define the Look.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.perspective:setAlpha">lu.perspective:setAlpha (alpha)</a></td>
+	<td class="summary">Sets the Alpha (angle in xz-plane).</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.perspective:setBeta">lu.perspective:setBeta (beta)</a></td>
+	<td class="summary">Sets the Beta (elevation angle).</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.perspective:get">lu.perspective:get (attr)</a></td>
+	<td class="summary">Gets the value of an attribute.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.perspective:incPosition">lu.perspective:incPosition (dir, dist)</a></td>
+	<td class="summary">Increases the position.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.perspective:incAlpha">lu.perspective:incAlpha (angle)</a></td>
+	<td class="summary">Increases alpha (angle in xz-plane) of <a href="../modules/pl.html#lu.perspective:setLook">Look</a>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.perspective:incBeta">lu.perspective:incBeta (angle)</a></td>
+	<td class="summary">Increases beta (elevation angle) of <a href="../modules/pl.html#lu.perspective:setLook">Look</a>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.perspective:detectPoint">lu.perspective:detectPoint (x, y, z)</a></td>
+	<td class="summary">Detects if a point is visible.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.perspective:detectBox">lu.perspective:detectBox (xmin, xmax, ymin, ymax, zmin, zmax)</a></td>
+	<td class="summary">Detects if a box is visible.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.perspective:zoom">lu.perspective:zoom (effect)</a></td>
+	<td class="summary">Makes a zoom.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.perspective:loadMatrices">lu.perspective:loadMatrices ()</a></td>
+	<td class="summary">Load the projection and modelview matrices (OpenGL).</td>
+	</tr>
+</table>
+<h2><a href="#BODIES">BODIES </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#lu.bodies">lu.bodies</a></td>
+	<td class="summary">This object represents the Bodies, that is to say the Physics Engine.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.bodies:add">lu.bodies:add (...)</a></td>
+	<td class="summary">Add a Body.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.bodies:draw">lu.bodies:draw ()</a></td>
+	<td class="summary">Draw all Bodies.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.bodies:action">lu.bodies:action (time)</a></td>
+	<td class="summary">Updates all Bodies.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.bodies:clear">lu.bodies:clear ()</a></td>
+	<td class="summary">Clear all Bodies.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TBody">TBody</a></td>
+	<td class="summary">The type of a Body.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TBody:init">TBody:init (time)</a></td>
+	<td class="summary">Initializes the Body.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TBody:setPosition">TBody:setPosition (x, y, z)</a></td>
+	<td class="summary">Sets the position of the Body.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TBody:setRebound">TBody:setRebound (rebound)</a></td>
+	<td class="summary">Sets the coefficient of restitution.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TBody:get">TBody:get (attr)</a></td>
+	<td class="summary">Gets the value of an attribute.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TBody:putVelocity">TBody:putVelocity (vx, vy, vz)</a></td>
+	<td class="summary">Sets the velocity of the Body when it is above another.</td>
+	</tr>
+</table>
+<h2><a href="#FORMS">FORMS </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#lu.forms">lu.forms</a></td>
+	<td class="summary">This object represents the Forms (3D models) that have been added.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.forms:add">lu.forms:add (filename, ifilename, texturePacks, onLists)</a></td>
+	<td class="summary">Add a Form (3D model).</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.forms:remove">lu.forms:remove (index)</a></td>
+	<td class="summary">Remove a Form.</td>
+	</tr>
+</table>
+<h2><a href="#FORMATAS">FORMATAS </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#lu.formatas">lu.formatas</a></td>
+	<td class="summary">This object represents the Formatas.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.formatas:add">lu.formatas:add (formIndex[, createBody=false[, usesGravity=false]])</a></td>
+	<td class="summary">Add a Formata.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.formatas:action">lu.formatas:action ()</a></td>
+	<td class="summary">Update all Formatas.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.formatas:draw">lu.formatas:draw ()</a></td>
+	<td class="summary">Draw all Formatas.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.formatas:clear">lu.formatas:clear ()</a></td>
+	<td class="summary">Clears <a href="../modules/pl.html#lu.formatas">lu.formatas</a> including Bodies linked.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TFormata">TFormata</a></td>
+	<td class="summary">The type of a Formata.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TFormata:init">TFormata:init (time)</a></td>
+	<td class="summary">Initializes the Formata.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TFormata:draw">TFormata:draw ([mode="VISIBLE"])</a></td>
+	<td class="summary">Draw the Formata.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TFormata:remove">TFormata:remove ()</a></td>
+	<td class="summary">Remove the Formata.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TFormata:setPosition">TFormata:setPosition (x, y, z)</a></td>
+	<td class="summary">Sets the position of the Formata.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TFormata:setTexturePack">TFormata:setTexturePack (texturePack)</a></td>
+	<td class="summary">Sets the Texture Pack of the Formata.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TFormata:get">TFormata:get (attr)</a></td>
+	<td class="summary">Gets the value of an attribute.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TFormata:putVelocity">TFormata:putVelocity (vx, vy, vz)</a></td>
+	<td class="summary">Sets the velocity of the Formata when it is above a Body.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TFormata:removeBody">TFormata:removeBody ()</a></td>
+	<td class="summary">Remove the Body.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TFormata:nextTexturePack">TFormata:nextTexturePack ()</a></td>
+	<td class="summary">Use the next Texture Pack.</td>
+	</tr>
+</table>
+<h2><a href="#ANIMATIONS">ANIMATIONS </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#lu.animations">lu.animations</a></td>
+	<td class="summary">This object represents the Animations (OBJ animations).</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.animations:add">lu.animations:add (folder, hasInvisible, texturePacks)</a></td>
+	<td class="summary">Add a Animation.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.animations:remove">lu.animations:remove (index)</a></td>
+	<td class="summary">Remove a Animation.</td>
+	</tr>
+</table>
+<h2><a href="#ANIMATAS">ANIMATAS </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#lu.animatas">lu.animatas</a></td>
+	<td class="summary">This object represents the Animatas.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.animatas:add">lu.animatas:add (animationIndex, kind)</a></td>
+	<td class="summary">Add an Animata.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.animatas:action">lu.animatas:action (time)</a></td>
+	<td class="summary">Update all Animatas.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.animatas:draw">lu.animatas:draw ([mode="VISIBLE"])</a></td>
+	<td class="summary">Draw all Animatas.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.animatas:FPSPlayerShoot">lu.animatas:FPSPlayerShoot (triggerPressed)</a></td>
+	<td class="summary">It makes the FPSPLAYER shoot or stop shooting.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.animatas:clear">lu.animatas:clear ()</a></td>
+	<td class="summary">Clears <a href="../modules/pl.html#lu.animatas">lu.animatas</a> including Bodies linked.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TAnimata">TAnimata</a></td>
+	<td class="summary">Type of an Animata.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TAnimata:init">TAnimata:init (time, motion)</a></td>
+	<td class="summary">Initializes the Animata.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TAnimata:draw">TAnimata:draw ([mode="VISIBLE"])</a></td>
+	<td class="summary">Draw the Animata.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TAnimata:remove">TAnimata:remove ()</a></td>
+	<td class="summary">Remove the Animata.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TAnimata:set">TAnimata:set (...)</a></td>
+	<td class="summary">It sets an attribute.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TAnimata:setSpeed">TAnimata:setSpeed (speed)</a></td>
+	<td class="summary">Sets the speed of an Animata.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TAnimata:setPosition">TAnimata:setPosition (x, y, z)</a></td>
+	<td class="summary">Sets the position of an Animata (except FPSBOTS).</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TAnimata:setRoute">TAnimata:setRoute (route, loopBegin, loopEnd)</a></td>
+	<td class="summary">Sets the route of an FPSBOT.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TAnimata:setTeam">TAnimata:setTeam (team)</a></td>
+	<td class="summary">Sets the Team of an FPSBOT or an FPSPLAYER.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TAnimata:setAttack">TAnimata:setAttack (attack)</a></td>
+	<td class="summary">Sets the Attack of an FPSBOT.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TAnimata:setHealth">TAnimata:setHealth (health)</a></td>
+	<td class="summary">Sets the Health of the Animata.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TAnimata:setTexturePack">TAnimata:setTexturePack (texturePack)</a></td>
+	<td class="summary">Sets the texture pack of the Animata.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TAnimata:setInterpolation">TAnimata:setInterpolation (interpolation)</a></td>
+	<td class="summary">Sets the type of interpolation for the animation.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TAnimata:setMotion">TAnimata:setMotion (time, motion)</a></td>
+	<td class="summary">Sets the motion of the Animata.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TAnimata:get">TAnimata:get (attr)</a></td>
+	<td class="summary">Gets the value of an attribute.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TAnimata:putDirection">TAnimata:putDirection (time, dx, dy, dz)</a></td>
+	<td class="summary">It makes the Animata move in one direction.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TAnimata:putNavigation">TAnimata:putNavigation (time, right, forward, up)</a></td>
+	<td class="summary">It makes the FPSPLAYER or the THIRDPLAYER move in one direction in terms of the Right, Forward and Up vectors of the <a href="../modules/pl.html#lu.perspective">Perspective</a>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TAnimata:reduceHealth">TAnimata:reduceHealth ([damage=1])</a></td>
+	<td class="summary">Reduce the Health.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TAnimata:removeBody">TAnimata:removeBody ()</a></td>
+	<td class="summary">Remove the Body.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#TAnimata:nextTexturePack">TAnimata:nextTexturePack ()</a></td>
+	<td class="summary">Use the next Texture Pack.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.stops">lu.stops</a></td>
+	<td class="summary">This object represents the Stops.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.stops:add">lu.stops:add (x, y, z)</a></td>
+	<td class="summary">Add a Stop.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.stops:clear">lu.stops:clear ()</a></td>
+	<td class="summary">Clear all Stops.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.holes">lu.holes</a></td>
+	<td class="summary">This object represents the Holes.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.holes:init">lu.holes:init (formIndex)</a></td>
+	<td class="summary">Initializes the Holes.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.holes:add">lu.holes:add (x, y, z, orientation)</a></td>
+	<td class="summary">Add a Hole in an position.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.holes:draw">lu.holes:draw ()</a></td>
+	<td class="summary">Draw all Holes.</td>
+	</tr>
+</table>
+<h2><a href="#GL2D">GL2D </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#lu.gl2d">lu.gl2d</a></td>
+	<td class="summary">A set of 2D routines.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.gl2d.enter">lu.gl2d.enter ()</a></td>
+	<td class="summary">Enters 2D mode.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.gl2d.leave">lu.gl2d.leave ()</a></td>
+	<td class="summary">Leave 2D mode.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.gl2d.aim">lu.gl2d.aim ()</a></td>
+	<td class="summary">Draws a square of 9 pixels in the center of the <a href="../modules/pl.html#lu.box">lu.box</a>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.gl2d.print">lu.gl2d.print (text, x, y[, font="GLUT_BITMAP_8_BY_13"[, aligment="LEFT"]])</a></td>
+	<td class="summary">Print a text.</td>
+	</tr>
+</table>
+<h2><a href="#BOX">BOX </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#lu.box">lu.box</a></td>
+	<td class="summary">A specialized iup.glcanvasbox for the Engine.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.box:setMouseEventsFromDialog">lu.box:setMouseEventsFromDialog ()</a></td>
+	<td class="summary">Makes mouse events to be captured from the <a href="../modules/pl.html#lu.dialog">lu.dialog</a>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.box:setMouseEventsFromBox">lu.box:setMouseEventsFromBox ()</a></td>
+	<td class="summary">Makes mouse events to be captured from the <a href="../modules/pl.html#lu.box">lu.box</a>.</td>
+	</tr>
+</table>
+<h2><a href="#DIALOG">DIALOG </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#lu.dialog">lu.dialog</a></td>
+	<td class="summary">A specialized iup.dialog for the Engine.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.dialog:changeMode">lu.dialog:changeMode ()</a></td>
+	<td class="summary">Change the dialog mode between windowed or full screen.</td>
+	</tr>
+</table>
+<h2><a href="#FUNCTIONS">FUNCTIONS </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#lu:init">lu:init (arduinoPort)</a></td>
+	<td class="summary">Initializes the Engine.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu:exit">lu:exit ()</a></td>
+	<td class="summary">Ends the Engine and releases internal memory.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.optimization">lu.optimization (kind, enable)</a></td>
+	<td class="summary">Enables/Disables an optimization.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.loadTexture">lu.loadTexture (filename)</a></td>
+	<td class="summary">Loads a new Texture.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.print3D">lu.print3D (text[, font="GLUT_BITMAP_8_BY_13"], x, y, z)</a></td>
+	<td class="summary">Prints a Text in a 3D position.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu:createBox">lu:createBox (boxParams, timerParams)</a></td>
+	<td class="summary">Create <a href="../modules/pl.html#lu.box">lu.box</a>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu:createDialog">lu:createDialog (params)</a></td>
+	<td class="summary">Create <a href="../modules/pl.html#lu.dialog">lu.dialog</a>.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu:play">lu:play ()</a></td>
+	<td class="summary">Run the application from <a href="../modules/pl.html#lu.dialog">lu.dialog</a>.</td>
+	</tr>
+</table>
+<h2><a href="#DRAWING_FUNCTIONS">DRAWING FUNCTIONS </a></h2>
+<table class="function_list">
+	<tr>
+	<td class="name" nowrap><a href="#lu.MaxViewport">lu.MaxViewport ()</a></td>
+	<td class="summary">Maximizes the active viewport.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.drawBackground">lu.drawBackground ()</a></td>
+	<td class="summary">Equivalent to gl.ClearColor(0.2, 0.4, 0.6, 0).</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.drawMargins">lu.drawMargins ()</a></td>
+	<td class="summary">Draw a grid in the XZ-Plane, and draw the X, Y, and Z axes.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.drawPoint">lu.drawPoint (x, y, z)</a></td>
+	<td class="summary">Draw a point in a position.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.drawBox">lu.drawBox (xmin, xmax, ymin, ymax, zmin, zmax)</a></td>
+	<td class="summary">Draw a box.</td>
+	</tr>
+	<tr>
+	<td class="name" nowrap><a href="#lu.drawBulletsTraces">lu.drawBulletsTraces ()</a></td>
+	<td class="summary">Draw the Traces of the Bullets (shot by <a href="../modules/pl.html#lu.animatas">FPSPLAYER</a> and <a href="../modules/pl.html#lu.animatas">FPSBOTS</a>).</td>
+	</tr>
+</table>
+
+<br/>
+<br/>
+
+
+    <h2 class="section-header "><a name="SCREEN"></a>SCREEN </h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "lu.screen"></a>
+    <strong>lu.screen</strong>
+    </dt>
+    <dd>
+    This object represents the Screen.
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">centerX</span>
+            <span class="types"><span class="type">int</span></span>
+         screen center x.
+        </li>
+        <li><span class="parameter">centerY</span>
+            <span class="types"><span class="type">int</span></span>
+         screen center y.
+        </li>
+        <li><span class="parameter">width</span>
+            <span class="types"><span class="type">int</span></span>
+         screen width.
+        </li>
+        <li><span class="parameter">height</span>
+            <span class="types"><span class="type">int</span></span>
+         screen height.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.screen:init"></a>
+    <strong>lu.screen:init ()</strong>
+    </dt>
+    <dd>
+    Initializes the attributes of <a href="../modules/pl.html#lu.screen">lu.screen</a>.
+ If you call <a href="../modules/pl.html#lu:init">lu:init</a>, you do not need to call this method, unless you change the screen.
+
+
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="KEYBOARD"></a>KEYBOARD </h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "lu.keyboard"></a>
+    <strong>lu.keyboard</strong>
+    </dt>
+    <dd>
+    This object represents the Keyboard.  Lets you know which key is pressed or released.
+ Note: This is updated by the "keypress_cb" event of <a href="../modules/pl.html#lu.box">lu.box</a>.
+
+
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">
+ lu.keyboard[iup.K_UP] <span class="comment">-- Returns true if the UP key is pressed, otherwise returns false
+</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "lu.keyboard:init"></a>
+    <strong>lu.keyboard:init ()</strong>
+    </dt>
+    <dd>
+    Initializes the attributes of <a href="../modules/pl.html#lu.keyboard">lu.keyboard</a>.  If you call <a href="../modules/pl.html#lu:init">lu:init</a>, you do not need to call this method, unless you change the keyboard.
+
+
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="MOUSE"></a>MOUSE </h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "lu.mouse"></a>
+    <strong>lu.mouse</strong>
+    </dt>
+    <dd>
+    This object represents the Mouse.
+ Note: This is updated by the "button_cb" event of <a href="../modules/pl.html#lu.box">lu.box</a> or <a href="../modules/pl.html#lu.dialog">lu.dialog</a>.
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">memX</span>
+         internal use.
+        </li>
+        <li><span class="parameter">memY</span>
+         internal use.
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">
+ lu.mouse[iup.BUTTON1] <span class="comment">-- left button pressed?
+</span> lu.mouse[iup.BUTTON2] <span class="comment">-- middle button pressed?
+</span> lu.mouse[iup.BUTTON3] <span class="comment">-- right button pressed?
+</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "lu.mouse:init"></a>
+    <strong>lu.mouse:init ()</strong>
+    </dt>
+    <dd>
+    Initializes the attributes of <a href="../modules/pl.html#lu.mouse">mouse</a>.
+ Note: this function also calls <a href="../modules/pl.html#lu.mouse:center">lu.mouse:center</a>.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.mouse:getPos"></a>
+    <strong>lu.mouse:getPos ()</strong>
+    </dt>
+    <dd>
+    Gets the position of the mouse cursor.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+        <li>
+           <span class="types"><span class="type">int</span></span>
+        Cursor X.</li>
+        <li>
+           <span class="types"><span class="type">int</span></span>
+        Cursor Y.</li>
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">x, y = lu.mouse:getPos()</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "lu.mouse:setPos"></a>
+    <strong>lu.mouse:setPos (x, y)</strong>
+    </dt>
+    <dd>
+    Sets the position of the mouse cursor.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">int</span></span>
+
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><span class="type">int</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">lu.mouse:setPos(<span class="number">20</span>,<span class="number">30</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "lu.mouse:center"></a>
+    <strong>lu.mouse:center ()</strong>
+    </dt>
+    <dd>
+    Sets the position of the mouse cursor in the center of the screen.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.mouse:getMotion"></a>
+    <strong>lu.mouse:getMotion ()</strong>
+    </dt>
+    <dd>
+    Gets the mouse cursor displacement since the last call to this function.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+        <li>
+           <span class="types"><span class="type">int</span></span>
+        displacement X.</li>
+        <li>
+           <span class="types"><span class="type">int</span></span>
+        displacement Y.</li>
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">x, y = lu.mouse:getMotion()</pre>
+    </ul>
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="AUDIO"></a>AUDIO </h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "lu.audio"></a>
+    <strong>lu.audio</strong>
+    </dt>
+    <dd>
+    This object represents the audio system of the Engine.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.audio:load"></a>
+    <strong>lu.audio:load (filename)</strong>
+    </dt>
+    <dd>
+    Loads a Sound from a file.  Fromats: WAV, VOC.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">filename</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the file.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../modules/pl.html#TSound">TSound</a></span>
+        the Sound (<a href="../modules/pl.html#TSound">TSound</a> type).
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TSound"></a>
+    <strong>TSound</strong>
+    </dt>
+    <dd>
+    Type of a Sound.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TSound:adjust"></a>
+    <strong>TSound:adjust (loop, vol, pan, frec)</strong>
+    </dt>
+    <dd>
+    Adjusts the parameters of the Sound.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">loop</span>
+            <span class="types"><span class="type">bool</span></span>
+         repeat?
+        </li>
+        <li><span class="parameter">vol</span>
+            <span class="types"><span class="type">int</span></span>
+         volume: 0 (min) to 255 (max).
+        </li>
+        <li><span class="parameter">pan</span>
+            <span class="types"><span class="type">int</span></span>
+         0 (left) to 255 (right).
+        </li>
+        <li><span class="parameter">frec</span>
+            <span class="types"><span class="type">int</span></span>
+         frequency: 1000 (normal).
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TSound:play"></a>
+    <strong>TSound:play (loop, vol, pan, frec)</strong>
+    </dt>
+    <dd>
+    Plays the Sound.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">loop</span>
+            <span class="types"><span class="type">bool</span></span>
+         repeat?
+        </li>
+        <li><span class="parameter">vol</span>
+            <span class="types"><span class="type">int</span></span>
+         volume: 0 (min) to 255 (max).
+        </li>
+        <li><span class="parameter">pan</span>
+            <span class="types"><span class="type">int</span></span>
+         0 (left) to 255 (right).
+        </li>
+        <li><span class="parameter">frec</span>
+            <span class="types"><span class="type">int</span></span>
+         frequency: 1000 (normal).
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TSound:adjust3D"></a>
+    <strong>TSound:adjust3D (loop, x, y, z, db)</strong>
+    </dt>
+    <dd>
+    Adjusts the parameters of the Sound for 3D effect.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">loop</span>
+            <span class="types"><span class="type">bool</span></span>
+         repeat?
+        </li>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         x-coordinate of the Sound, in meters.
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><span class="type">number</span></span>
+         y-coordinate of the Sound, in meters.
+        </li>
+        <li><span class="parameter">z</span>
+            <span class="types"><span class="type">number</span></span>
+         z-coordinate of the Sound, in meters.
+        </li>
+        <li><span class="parameter">db</span>
+            <span class="types"><span class="type">number</span></span>
+         Sound power level.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TSound:play3D"></a>
+    <strong>TSound:play3D (loop, x, y, z, db)</strong>
+    </dt>
+    <dd>
+    Plays the Sound with 3D effect.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">loop</span>
+            <span class="types"><span class="type">bool</span></span>
+         repeat?
+        </li>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         x-coordinate of the Sound, in meters.
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><span class="type">number</span></span>
+         y-coordinate of the Sound, in meters.
+        </li>
+        <li><span class="parameter">z</span>
+            <span class="types"><span class="type">number</span></span>
+         z-coordinate of the Sound, in meters.
+        </li>
+        <li><span class="parameter">db</span>
+            <span class="types"><span class="type">number</span></span>
+         Sound power level.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="ARDUINO"></a>ARDUINO </h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "lu.arduino"></a>
+    <strong>lu.arduino</strong>
+    </dt>
+    <dd>
+    This object represents the Arduino.
+ Arduino constants: INPUT, OUTPUT, PWM, LOW, HIGH, ANALOG.
+ Note: This object is null until invoking <a href="../modules/pl.html#lu:init">lu:init</a>, passing the port of the board.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.arduino.pinMode"></a>
+    <strong>lu.arduino.pinMode (pin, mode)</strong>
+    </dt>
+    <dd>
+    Configures the specified pin to behave either as an input or an output.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">pin</span>
+            <span class="types"><span class="type">int</span></span>
+          the number of the pin.
+        </li>
+        <li><span class="parameter">mode</span>
+            <span class="types"><span class="type">int</span></span>
+         possible values: INPUT, OUTPUT, PWM.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.arduino.analogWrite"></a>
+    <strong>lu.arduino.analogWrite (pin, value)</strong>
+    </dt>
+    <dd>
+    Writes an analog value (PWM wave) to a pin.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">pin</span>
+            <span class="types"><span class="type">int</span></span>
+          the number of the pin.
+        </li>
+        <li><span class="parameter">value</span>
+            <span class="types"><span class="type">int</span></span>
+         value between 0 (always off) and 255 (always on).
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.arduino.analogRead"></a>
+    <strong>lu.arduino.analogRead (pin)</strong>
+    </dt>
+    <dd>
+    Reads the value from the specified analog pin.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">pin</span>
+            <span class="types"><span class="type">int</span></span>
+          the number of the pin.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">int</span></span>
+        0 to 1023.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.digitalWrite"></a>
+    <strong>lu.digitalWrite (pin, value)</strong>
+    </dt>
+    <dd>
+    Write a HIGH or a LOW value to a digital pin.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">pin</span>
+            <span class="types"><span class="type">int</span></span>
+          the number of the pin.
+        </li>
+        <li><span class="parameter">value</span>
+            <span class="types"><span class="type">int</span></span>
+         HIGH or LOW.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.digitalRead"></a>
+    <strong>lu.digitalRead (pin)</strong>
+    </dt>
+    <dd>
+    Reads the value from a specified digital pin, either HIGH or LOW.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">pin</span>
+            <span class="types"><span class="type">int</span></span>
+          the number of the pin.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">int</span></span>
+        HIGH or LOW.
+    </ol>
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="CHRONOMETER"></a>CHRONOMETER </h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "lu.chrono"></a>
+    <strong>lu.chrono</strong>
+    </dt>
+    <dd>
+    This object represents the chronometer.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.chrono:reset"></a>
+    <strong>lu.chrono:reset ()</strong>
+    </dt>
+    <dd>
+    Reset chronometer.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.chrono:time"></a>
+    <strong>lu.chrono:time ()</strong>
+    </dt>
+    <dd>
+    Get the seconds elapsed.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        seconds elapsed.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.chrono:pause"></a>
+    <strong>lu.chrono:pause ()</strong>
+    </dt>
+    <dd>
+    Pause chronometer.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.chrono:start"></a>
+    <strong>lu.chrono:start ()</strong>
+    </dt>
+    <dd>
+    Start chronometer.
+
+
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="FRAME_CHRONOMETER"></a>FRAME CHRONOMETER </h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "lu.framechrono"></a>
+    <strong>lu.framechrono</strong>
+    </dt>
+    <dd>
+    This object represents the frame-chronometer.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.framechrono:reset"></a>
+    <strong>lu.framechrono:reset (timejump)</strong>
+    </dt>
+    <dd>
+    Reset the frame-chronometer.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">timejump</span>
+            <span class="types"><span class="type">number</span></span>
+         Maximum time (in seconds) between two frames.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.framechrono:time"></a>
+    <strong>lu.framechrono:time ()</strong>
+    </dt>
+    <dd>
+    Get the seconds elapsed.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">number</span></span>
+        seconds elapsed.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.framechrono:pause"></a>
+    <strong>lu.framechrono:pause ()</strong>
+    </dt>
+    <dd>
+    Pause the frame-chronometer.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.framechrono:start"></a>
+    <strong>lu.framechrono:start ()</strong>
+    </dt>
+    <dd>
+    Start the frame-chronometer.
+
+
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="FPS_COUNTER"></a>FPS COUNTER </h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "lu.fpscounter"></a>
+    <strong>lu.fpscounter</strong>
+    </dt>
+    <dd>
+    This object represents the Counter of FPS(frames per second).
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.fpscounter:reset"></a>
+    <strong>lu.fpscounter:reset ()</strong>
+    </dt>
+    <dd>
+    Reset FPS counter.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.fpscounter:watch"></a>
+    <strong>lu.fpscounter:watch ()</strong>
+    </dt>
+    <dd>
+    Get the frames per second.
+ When a second has elapsed since the last call, the new FPS count will be returned.
+ Note: This function must be called from the main loop of the game and for each frame.
+
+
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">int</span></span>
+        FPS.
+    </ol>
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="PERSPECTIVE"></a>PERSPECTIVE </h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "lu.perspective"></a>
+    <strong>lu.perspective</strong>
+    </dt>
+    <dd>
+    This object represents the Perspective.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.perspective:setCamera"></a>
+    <strong>lu.perspective:setCamera (cam)</strong>
+    </dt>
+    <dd>
+    Set the Perspective Camera.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">cam</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         possible values: "FIRST" (first person camera), "THRID" (third person camera).
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.perspective:setFrustum"></a>
+    <strong>lu.perspective:setFrustum (fovy, near, far)</strong>
+    </dt>
+    <dd>
+    Set the Frustum.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">fovy</span>
+            <span class="types"><span class="type">number</span></span>
+         field of view angle, in degrees, in the y direction.
+        </li>
+        <li><span class="parameter">near</span>
+            <span class="types"><span class="type">number</span></span>
+         distance from the viewer to the near clipping plane.
+        </li>
+        <li><span class="parameter">far</span>
+            <span class="types"><span class="type">number</span></span>
+         distance from the viewer to the far clipping plane.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.perspective:setLook"></a>
+    <strong>lu.perspective:setLook (x, y, z, alpha, beta, dist)</strong>
+    </dt>
+    <dd>
+    Define the Look.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         x-coordinate of the Eye (<a href="../modules/pl.html#lu.perspective:setCamera">FIRST</a>) or Observation Point (<a href="../modules/pl.html#lu.perspective:setCamera">THRID</a>).
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><span class="type">number</span></span>
+         y-coordinate of the Eye (<a href="../modules/pl.html#lu.perspective:setCamera">FIRST</a>) or Observation Point (<a href="../modules/pl.html#lu.perspective:setCamera">THRID</a>).
+        </li>
+        <li><span class="parameter">z</span>
+            <span class="types"><span class="type">number</span></span>
+         z-coordinate of the Eye (<a href="../modules/pl.html#lu.perspective:setCamera">FIRST</a>) or Observation Point (<a href="../modules/pl.html#lu.perspective:setCamera">THRID</a>).
+        </li>
+        <li><span class="parameter">alpha</span>
+            <span class="types"><span class="type">number</span></span>
+         Alpha (angle in xz-plane), in degrees.
+        </li>
+        <li><span class="parameter">beta</span>
+            <span class="types"><span class="type">number</span></span>
+         Beta (elevation angle), in degrees.
+        </li>
+        <li><span class="parameter">dist</span>
+            <span class="types"><span class="type">number</span></span>
+         distance from Eye to Observation Point, Only has effect on <a href="../modules/pl.html#lu.perspective:setCamera">THRID</a>.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.perspective:setAlpha"></a>
+    <strong>lu.perspective:setAlpha (alpha)</strong>
+    </dt>
+    <dd>
+    Sets the Alpha (angle in xz-plane).
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">alpha</span>
+            <span class="types"><span class="type">number</span></span>
+         angle, in degrees.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.perspective:setBeta"></a>
+    <strong>lu.perspective:setBeta (beta)</strong>
+    </dt>
+    <dd>
+    Sets the Beta (elevation angle).
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">beta</span>
+            <span class="types"><span class="type">number</span></span>
+         angle, in degrees.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.perspective:get"></a>
+    <strong>lu.perspective:get (attr)</strong>
+    </dt>
+    <dd>
+    Gets the value of an attribute.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">attr</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         attribute name, possible values:<br>
+ <b>"INFO"</b>: (return: <b>string</b>) information about: alpha, beta, position. <br>
+ <b>"ALPHA"</b>: (return: <b>number</b>) alpha angle. <br>
+ <b>"BETA"</b>: (return: <b>number</b>) beta angle. <br>
+ <b>"EYE"</b>: (return: <b>number, number, number</b>) position of the Eye. <br>
+ <b>"OBSERVATION"</b>: (return: <b>number, number, number</b>) Observation Point (<a href="../modules/pl.html#lu.perspective:setCamera">THRID</a>). <br>
+ <b>"FRONT"</b>: (return: <b>number, number, number</b>) FRONT vector. <br>
+ <b>"UP"</b>: (return: <b>number, number, number</b>) UP vector. <br>
+ <b>"RIGHT"</b>: (return: <b>number, number, number</b>) RIGHT vector. <br>
+ <b>"FORWARD"</b>: (return: <b>number, number, number</b>) FORWARD vector. <br>
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.perspective:incPosition"></a>
+    <strong>lu.perspective:incPosition (dir, dist)</strong>
+    </dt>
+    <dd>
+    Increases the position.  In the case of <a href="../modules/pl.html#lu.perspective:setCamera">FIRST</a> it means the Eye position, and in the case of <a href="../modules/pl.html#lu.perspective:setCamera">THRID</a> it means Observation Point.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">dir</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the direction, possible values: "FORWARD", "RIGHT", "FRONT".
+        </li>
+        <li><span class="parameter">dist</span>
+            <span class="types"><span class="type">number</span></span>
+         the distance.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.perspective:incAlpha"></a>
+    <strong>lu.perspective:incAlpha (angle)</strong>
+    </dt>
+    <dd>
+    Increases alpha (angle in xz-plane) of <a href="../modules/pl.html#lu.perspective:setLook">Look</a>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">angle</span>
+            <span class="types"><span class="type">number</span></span>
+         angle in degrees.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.perspective:incBeta"></a>
+    <strong>lu.perspective:incBeta (angle)</strong>
+    </dt>
+    <dd>
+    Increases beta (elevation angle) of <a href="../modules/pl.html#lu.perspective:setLook">Look</a>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">angle</span>
+            <span class="types"><span class="type">number</span></span>
+         angle in degrees.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.perspective:detectPoint"></a>
+    <strong>lu.perspective:detectPoint (x, y, z)</strong>
+    </dt>
+    <dd>
+    Detects if a point is visible.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         x-coordinate of the Point, in meters.
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><span class="type">number</span></span>
+         y-coordinate of the Point, in meters.
+        </li>
+        <li><span class="parameter">z</span>
+            <span class="types"><span class="type">number</span></span>
+         z-coordinate of the Point, in meters.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        is visible?
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.perspective:detectBox"></a>
+    <strong>lu.perspective:detectBox (xmin, xmax, ymin, ymax, zmin, zmax)</strong>
+    </dt>
+    <dd>
+    Detects if a box is visible.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">xmin</span>
+            <span class="types"><span class="type">number</span></span>
+         Min. x.
+        </li>
+        <li><span class="parameter">xmax</span>
+            <span class="types"><span class="type">number</span></span>
+         Max. x.
+        </li>
+        <li><span class="parameter">ymin</span>
+            <span class="types"><span class="type">number</span></span>
+         Min. y.
+        </li>
+        <li><span class="parameter">ymax</span>
+            <span class="types"><span class="type">number</span></span>
+         Max. y.
+        </li>
+        <li><span class="parameter">zmin</span>
+            <span class="types"><span class="type">number</span></span>
+         Min. z.
+        </li>
+        <li><span class="parameter">zmax</span>
+            <span class="types"><span class="type">number</span></span>
+         Max. z.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">bool</span></span>
+        is visible?
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.perspective:zoom"></a>
+    <strong>lu.perspective:zoom (effect)</strong>
+    </dt>
+    <dd>
+    Makes a zoom.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">effect</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         possible values: "ORIGINAL", "IN", "OUT".
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.perspective:loadMatrices"></a>
+    <strong>lu.perspective:loadMatrices ()</strong>
+    </dt>
+    <dd>
+    Load the projection and modelview matrices (OpenGL).
+
+
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="BODIES"></a>BODIES </h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "lu.bodies"></a>
+    <strong>lu.bodies</strong>
+    </dt>
+    <dd>
+    This object represents the Bodies, that is to say the Physics Engine.
+ Often the game objects (<a href="../modules/pl.html#lu.formatas">Formatas</a> and <a href="../modules/pl.html#lu.animatas">Animatas</a>) are linked to Bodies to guide their movement and detect collisions.
+ To access the i-th Body, invoke lu.bodies[i], which returns an <a href="../modules/pl.html#TBody">TBody</a> object.
+ The <a href="../modules/pl.html#lu.bodies">lu.bodies</a> object has some fields of type function, which are invoked according to the events that occur in the system of Bodies.
+ The parameters of these functions are the same b, bk, bi, t, tk, ti, x, y, z; <br>
+ <br> b: (<b><i>int</i></b>) index of the Body that commits the action.
+ <br> bk: (<b><i>string</i></b>) type of the game object linked to the Body lu.bodies[b]; "NONE", "FORMATA", "ANIMATA".
+ <br> bi: (<b><i>int</i></b>) index of the game object linked to the Body lu.bodies[b].
+ <br> t: (<b><i>int</i></b>) index of the impacted Body.
+ <br> tk: (<b><i>string</i></b>) type of the game object linked to the Body lu.bodies[t]; "NONE", "FORMATA", "ANIMATA".
+ <br> ti: (<b><i>int</i></b>) index of the game object linked to the Body lu.bodies[t].
+ <br> x,y,z: (<b><i>number</i></b>) the coordinates of the position where the impact occurs.
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">onCollisionUp</span>
+            <span class="types"><span class="type">func</span></span>
+        (b, bk, bi, t, tk, ti, x, y, z)
+        </li>
+        <li><span class="parameter">onCollisionDown</span>
+            <span class="types"><span class="type">func</span></span>
+        (b, bk, bi, t, tk, ti, x, y, z)
+        </li>
+        <li><span class="parameter">onCollisionSide</span>
+            <span class="types"><span class="type">func</span></span>
+        (b, bk, bi, t, tk, ti, x, y, z)
+        </li>
+        <li><span class="parameter">onGround</span>
+            <span class="types"><span class="type">func</span></span>
+        (b, bk, bi, t, tk, ti, x, y, z)
+        </li>
+        <li><span class="parameter">onRunEnter</span>
+            <span class="types"><span class="type">func</span></span>
+        (b, bk, bi, t, tk, ti, x, y, z)
+        </li>
+        <li><span class="parameter">onRunExit</span>
+            <span class="types"><span class="type">func</span></span>
+        (b, bk, bi, t, tk, ti, x, y, z)
+        </li>
+        <li><span class="parameter">onAscend</span>
+            <span class="types"><span class="type">func</span></span>
+        (b, bk, bi, t, tk, ti, x, y, z)
+        </li>
+        <li><span class="parameter">onDescend</span>
+            <span class="types"><span class="type">func</span></span>
+        (b, bk, bi, t, tk, ti, x, y, z)
+        </li>
+        <li><span class="parameter">onBulletDispatch</span>
+            <span class="types"><span class="type">func</span></span>
+        (b, bk, bi, t, tk, ti, x, y, z)
+        </li>
+        <li><span class="parameter">onBulletImpact</span>
+            <span class="types"><span class="type">func</span></span>
+        (b, bk, bi, t, tk, ti, x, y, z)
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">
+ lu.bodies[<span class="number">0</span>] <span class="comment">-- returns the Body 0
+</span></pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "lu.bodies:add"></a>
+    <strong>lu.bodies:add (...)</strong>
+    </dt>
+    <dd>
+    Add a Body.
+ Note: All Bodies created with this method are not linked to any game object (<a href="../modules/pl.html#lu.formatas">Formata</a> or <a href="../modules/pl.html#lu.animatas">Animata</a>), so in an event, the type of game object to which it is linked will be "NONE".
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">...</span>
+
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><a class="type" href="../modules/pl.html#TBody">TBody</a></span>
+        Body added.
+    </ol>
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">
+ <span class="comment">-- Add a Body sensitive to gravity and defined by: xmin=1, xmax=2, ymin=3, ymax=4, zmin=5, zmax=6
+</span> lu.bodies:add(<span class="number">1</span>,<span class="number">2</span>, <span class="number">3</span>,<span class="number">4</span>, <span class="number">5</span>,<span class="number">6</span>, <span class="keyword">true</span>)
+ <span class="comment">-- Add a Body sensitive to gravity and defined by: "c:/body.smd"
+</span> lu.bodies:add(<span class="string">"c:/body.smd"</span>, <span class="keyword">true</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "lu.bodies:draw"></a>
+    <strong>lu.bodies:draw ()</strong>
+    </dt>
+    <dd>
+    Draw all Bodies.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.bodies:action"></a>
+    <strong>lu.bodies:action (time)</strong>
+    </dt>
+    <dd>
+    Updates all Bodies.
+ Note: This function must be called from the main loop of the game.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">time</span>
+            <span class="types"><span class="type">number</span></span>
+         instant (seconds) when update occurs.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.bodies:clear"></a>
+    <strong>lu.bodies:clear ()</strong>
+    </dt>
+    <dd>
+    Clear all Bodies.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TBody"></a>
+    <strong>TBody</strong>
+    </dt>
+    <dd>
+    The type of a Body.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TBody:init"></a>
+    <strong>TBody:init (time)</strong>
+    </dt>
+    <dd>
+    Initializes the Body.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">time</span>
+            <span class="types"><span class="type">number</span></span>
+         instant (seconds) when initialization occurs.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TBody:setPosition"></a>
+    <strong>TBody:setPosition (x, y, z)</strong>
+    </dt>
+    <dd>
+    Sets the position of the Body.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         x-coordinate of the position, in meters.
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><span class="type">number</span></span>
+         y-coordinate of the position, in meters.
+        </li>
+        <li><span class="parameter">z</span>
+            <span class="types"><span class="type">number</span></span>
+         z-coordinate of the position, in meters.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TBody:setRebound"></a>
+    <strong>TBody:setRebound (rebound)</strong>
+    </dt>
+    <dd>
+    Sets the coefficient of restitution.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">rebound</span>
+            <span class="types"><span class="type">number</span></span>
+         the coefficient of restitution. Reference: 0 (inelastic), 1 (perfectly elastic).
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TBody:get"></a>
+    <strong>TBody:get (attr)</strong>
+    </dt>
+    <dd>
+    Gets the value of an attribute.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">attr</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         attribute name, possible values:<br>
+ <b>"INFO"</b>: (return: <b>string</b>) information about: index, link, state, position, velocity. <br>
+ <b>"INDEX"</b>: (return: <b>integer</b>) index. <br>
+ <b>"STATE"</b>: (return: <b>string</b>) state. <br>
+ <b>"POSITION"</b>: (return: <b>number, number, number</b>) position. <br>
+ <b>"VELOCITY"</b>: (return: <b>number, number, number</b>) velocity. <br>
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TBody:putVelocity"></a>
+    <strong>TBody:putVelocity (vx, vy, vz)</strong>
+    </dt>
+    <dd>
+    Sets the velocity of the Body when it is above another.
+ Note: This method can only be used if the Body has been <a href="../modules/pl.html#TBody:init">initialized</a>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">vx</span>
+            <span class="types"><span class="type">number</span></span>
+         x-component of the velocity, in m/s.
+        </li>
+        <li><span class="parameter">vy</span>
+            <span class="types"><span class="type">number</span></span>
+         y-component of the velocity, in m/s.
+        </li>
+        <li><span class="parameter">vz</span>
+            <span class="types"><span class="type">number</span></span>
+         z-component of the velocity, in m/s.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="FORMS"></a>FORMS </h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "lu.forms"></a>
+    <strong>lu.forms</strong>
+    </dt>
+    <dd>
+    This object represents the Forms (3D models) that have been added.
+ The Forms can not be drawn, they only serve to construct the <a href="../modules/pl.html#lu.formatas">Formatas</a>, which can be drawn, can be linked with Bodies, etc.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.forms:add"></a>
+    <strong>lu.forms:add (filename, ifilename, texturePacks, onLists)</strong>
+    </dt>
+    <dd>
+    Add a Form (3D model).  Note: The materials will not be loaded, only: textures, triangles (vertices), normals and texcoords.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">filename</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         file (SMD or OBJ) of the 3D model.
+        </li>
+        <li><span class="parameter">ifilename</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         file (SMD or OBJ) of the 3D model that will be used instead of the original for the internal routines of detection.
+ The model must have much less triangles than the original but without leaving much of the original Form, since the idea is to optimize.
+ If you do not have a model for this pass an empty string, and the original model will be taken for such routines.
+        </li>
+        <li><span class="parameter">texturePacks</span>
+            <span class="types"><span class="type">int</span></span>
+         number of texture packs.
+ This Engine allows to load more than one texture pack, so you can texturize in many ways.
+ For example for 3 texture packs, where the first pack, i.e. the original textures, are "A.jpg" and "B.jpg", the second pack should be "pack1_A.jpg" and "pack1_B.jpg", and the third and last should be "pack2_A.jpg" and "pack2_B.jpg".
+        </li>
+        <li><span class="parameter">onLists</span>
+            <span class="types"><span class="type">bool</span></span>
+         possible values: true (load in display lists), false (load in memory).
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">int</span></span>
+        index of the Form.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.forms:remove"></a>
+    <strong>lu.forms:remove (index)</strong>
+    </dt>
+    <dd>
+    Remove a Form.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">index</span>
+            <span class="types"><span class="type">int</span></span>
+         index of the Form.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="FORMATAS"></a>FORMATAS </h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "lu.formatas"></a>
+    <strong>lu.formatas</strong>
+    </dt>
+    <dd>
+    This object represents the Formatas.
+ A Formata is a <a href="../modules/pl.html#lu.forms">Form</a> (3D model) with optional link to bodies, with methods to be drawn and positioned, among others.
+ To access the i-th Formata, invoke lu.formatas[i], which returns an <a href="../modules/pl.html#TFormata">TFormata</a> object.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.formatas:add"></a>
+    <strong>lu.formatas:add (formIndex[, createBody=false[, usesGravity=false]])</strong>
+    </dt>
+    <dd>
+    Add a Formata.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">formIndex</span>
+            <span class="types"><span class="type">int</span></span>
+         index of the Form.
+        </li>
+        <li><span class="parameter">createBody</span>
+            <span class="types"><span class="type">bool</span></span>
+         possible values: true (creates a Body just to the measure of the Form), false (does not create the Body).
+         (<em>default</em> false)
+        </li>
+        <li><span class="parameter">usesGravity</span>
+            <span class="types"><span class="type">bool</span></span>
+         possible values: true, false.
+         (<em>default</em> false)
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+        <li>
+           <span class="types"><a class="type" href="../modules/pl.html#TFormata">TFormata</a></span>
+        Formata added.</li>
+        <li>
+           <span class="types"><a class="type" href="../modules/pl.html#TBody">TBody</a></span>
+        Body of the Formata added. Note: If createBody is false, this return will be nil.</li>
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.formatas:action"></a>
+    <strong>lu.formatas:action ()</strong>
+    </dt>
+    <dd>
+    Update all Formatas.  This is necessary only when some Formata is linked to a body.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.formatas:draw"></a>
+    <strong>lu.formatas:draw ()</strong>
+    </dt>
+    <dd>
+    Draw all Formatas.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.formatas:clear"></a>
+    <strong>lu.formatas:clear ()</strong>
+    </dt>
+    <dd>
+    Clears <a href="../modules/pl.html#lu.formatas">lu.formatas</a> including Bodies linked.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TFormata"></a>
+    <strong>TFormata</strong>
+    </dt>
+    <dd>
+    The type of a Formata.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TFormata:init"></a>
+    <strong>TFormata:init (time)</strong>
+    </dt>
+    <dd>
+    Initializes the Formata.  Note: The initialization is only necessary when the Formata is linked to a Body.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">time</span>
+            <span class="types"><span class="type">number</span></span>
+         instant (seconds) when initialization occurs.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TFormata:draw"></a>
+    <strong>TFormata:draw ([mode="VISIBLE"])</strong>
+    </dt>
+    <dd>
+    Draw the Formata.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">mode</span>
+         possible values: "VISIBLE", "INVISIBLE".
+         (<em>default</em> "VISIBLE")
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TFormata:remove"></a>
+    <strong>TFormata:remove ()</strong>
+    </dt>
+    <dd>
+    Remove the Formata.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TFormata:setPosition"></a>
+    <strong>TFormata:setPosition (x, y, z)</strong>
+    </dt>
+    <dd>
+    Sets the position of the Formata.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         x-coordinate of the position, in meters.
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><span class="type">number</span></span>
+         y-coordinate of the position, in meters.
+        </li>
+        <li><span class="parameter">z</span>
+            <span class="types"><span class="type">number</span></span>
+         z-coordinate of the position, in meters.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TFormata:setTexturePack"></a>
+    <strong>TFormata:setTexturePack (texturePack)</strong>
+    </dt>
+    <dd>
+    Sets the Texture Pack of the Formata.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">texturePack</span>
+            <span class="types"><span class="type">int</span></span>
+         index of the Texture Pack. The index of the first pack, that is to say the original textures, is 0, the second pack is 1, and so on.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TFormata:get"></a>
+    <strong>TFormata:get (attr)</strong>
+    </dt>
+    <dd>
+    Gets the value of an attribute.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">attr</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         attribute name, possible values:<br>
+ <b>"INFO"</b>: (return: <b>string</b>) information about: index, Body, Texture Pack. <br>
+ <b>"INDEX"</b>: (return: <b>integer</b>) index. <br>
+ <b>"BODY"</b>: (return: <b><a href="../modules/pl.html#TBody">TBody</a></b>) Body. <br>
+ <b>"TEXTUREPACK"</b>: (return: <b>integer</b>) Texture Pack. <br>
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TFormata:putVelocity"></a>
+    <strong>TFormata:putVelocity (vx, vy, vz)</strong>
+    </dt>
+    <dd>
+    Sets the velocity of the Formata when it is above a Body.
+ Note: This method can only be used if the Formata has been <a href="../modules/pl.html#TFormata:init">initialized</a>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">vx</span>
+            <span class="types"><span class="type">number</span></span>
+         x-component of the velocity, in m/s.
+        </li>
+        <li><span class="parameter">vy</span>
+            <span class="types"><span class="type">number</span></span>
+         y-component of the velocity, in m/s.
+        </li>
+        <li><span class="parameter">vz</span>
+            <span class="types"><span class="type">number</span></span>
+         z-component of the velocity, in m/s.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TFormata:removeBody"></a>
+    <strong>TFormata:removeBody ()</strong>
+    </dt>
+    <dd>
+    Remove the Body.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TFormata:nextTexturePack"></a>
+    <strong>TFormata:nextTexturePack ()</strong>
+    </dt>
+    <dd>
+    Use the next Texture Pack.
+
+
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="ANIMATIONS"></a>ANIMATIONS </h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "lu.animations"></a>
+    <strong>lu.animations</strong>
+    </dt>
+    <dd>
+    This object represents the Animations (OBJ animations).
+ The Animations can not be drawn, they only serve to construct the <a href="../modules/pl.html#lu.animatas">Animatas</a>, which can be drawn, can be linked with Bodies, etc.
+ The OBJ files of an OBJ animation are read in order, and in that order the frames are assigned, although starting from 0, so the first file will be taken as frame 0, the second as frame 1, and so on.
+ You must consider this enumeration because you must specify frames for each movement in the <b>attrs.lua</b> file.
+ <br><br><b>About the OBJ animations</b>:
+ The OBJ animations should be built with Blender (> 2.6) through the OBJ exporter, starting from frame 0, frame by frame to the end.
+ During modeling, be sure to triangulate all faces to avoid inconsistencies in the interpolations.
+ In the OBJ exporter options only select: -Z Forward, Y Up, Animation, Apply Modifiers, Write Normals, Include UVs, Write Materials, Triangulate Faces and Objects as OBJ Objects.
+ <br><br><b>About the attrs.lua file:</b>
+ This file is as important as any OBJ file, since there you include the information of the movements, such as the name and the frames that correspond to it.
+ You can also include other attributes such as: Speed, Eye Position, etc. (See an attrs.lua file of an example animation).
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.animations:add"></a>
+    <strong>lu.animations:add (folder, hasInvisible, texturePacks)</strong>
+    </dt>
+    <dd>
+    Add a Animation.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">folder</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         folder where are the OBJ files of the Animation.
+        </li>
+        <li><span class="parameter">hasInvisible</span>
+            <span class="types"><span class="type">bool</span></span>
+         An animation has invisible if it has another corresponding OBJ animation, with many less triangles, similar to the original form and located in the "invisible" subfolder.
+ This animation is used in the detection routines of the FPS Game System. If you pass false, the detection routines will use the original animation.
+        </li>
+        <li><span class="parameter">texturePacks</span>
+            <span class="types"><span class="type">int</span></span>
+         number of texture packs.
+ This Engine allows to load more than one texture pack, so you can texturize in many ways.
+ For example for 3 texture packs, where the first pack, i.e. the original textures, are "A.jpg" and "B.jpg", the second pack should be "pack1_A.jpg" and "pack1_B.jpg", and the third and last should be "pack2_A.jpg" and "pack2_B.jpg".
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">int</span></span>
+        Index of the Animation.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.animations:remove"></a>
+    <strong>lu.animations:remove (index)</strong>
+    </dt>
+    <dd>
+    Remove a Animation.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">index</span>
+            <span class="types"><span class="type">int</span></span>
+         index of the Animation.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="ANIMATAS"></a>ANIMATAS </h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "lu.animatas"></a>
+    <strong>lu.animatas</strong>
+    </dt>
+    <dd>
+    This object represents the Animatas.
+ An Animata is a <a href="../modules/pl.html#lu.animations">Animation</a> (OBJ animation) with optional link to bodies, with methods to be drawn and positioned, among others.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.animatas:add"></a>
+    <strong>lu.animatas:add (animationIndex, kind)</strong>
+    </dt>
+    <dd>
+    Add an Animata.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">animationIndex</span>
+            <span class="types"><span class="type">int</span></span>
+         index of the Animation.
+        </li>
+        <li><span class="parameter">kind</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         possible values: <br>
+ <b>"SIMPLE"</b>: It is not linked to any Body, and does not interact with anything.<br>
+ <b>"FPSBOT"</b>: It is linked to a Body, and has artificial intelligence to attack an "FPSBOT" or a "FPSPLAYER".<br>
+ <b>"FPSPLAYER"</b>: It is linked to a Body, dominates the <a href="../modules/pl.html#lu.perspective">Perspective</a> in <a href="../modules/pl.html#lu.perspective:setCamera">FIRST</a>, and there can be only one of its kind.<br>
+ <b>"THIRDBOT"</b>: It is linked to a Body.<br>
+ <b>"THIRDPLAYER"</b>: It is linked to a Body, dominates the <a href="../modules/pl.html#lu.perspective">Perspective</a> in <a href="../modules/pl.html#lu.perspective:setCamera">THIRD</a>, and there can be only one of its kind.<br>
+ Note: A "FPSPLAYER" and a "THIRDPLAYER" can not coexist.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+        <li>
+           <span class="types"><a class="type" href="../modules/pl.html#TAnimata">TAnimata</a></span>
+        Animata added.</li>
+        <li>
+           <span class="types"><a class="type" href="../modules/pl.html#TBody">TBody</a></span>
+        Body of the Animata added. Note: If kind is SIMPLE, this return will be nil.</li>
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.animatas:action"></a>
+    <strong>lu.animatas:action (time)</strong>
+    </dt>
+    <dd>
+    Update all Animatas.
+ Note: This function should be called just after <a href="../modules/pl.html#lu.bodies:action">lu.bodies:action</a>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">time</span>
+            <span class="types"><span class="type">number</span></span>
+         instant (seconds) when update occurs.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.animatas:draw"></a>
+    <strong>lu.animatas:draw ([mode="VISIBLE"])</strong>
+    </dt>
+    <dd>
+    Draw all Animatas.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">mode</span>
+         possible values: "VISIBLE", "INVISIBLE".
+         (<em>default</em> "VISIBLE")
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.animatas:FPSPlayerShoot"></a>
+    <strong>lu.animatas:FPSPlayerShoot (triggerPressed)</strong>
+    </dt>
+    <dd>
+    It makes the FPSPLAYER shoot or stop shooting.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">triggerPressed</span>
+            <span class="types"><span class="type">bool</span></span>
+         true (shoot), false (stop shooting).
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.animatas:clear"></a>
+    <strong>lu.animatas:clear ()</strong>
+    </dt>
+    <dd>
+    Clears <a href="../modules/pl.html#lu.animatas">lu.animatas</a> including Bodies linked.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TAnimata"></a>
+    <strong>TAnimata</strong>
+    </dt>
+    <dd>
+    Type of an Animata.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TAnimata:init"></a>
+    <strong>TAnimata:init (time, motion)</strong>
+    </dt>
+    <dd>
+    Initializes the Animata.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">time</span>
+            <span class="types"><span class="type">number</span></span>
+         instant (seconds) when initialization occurs.
+        </li>
+        <li><span class="parameter">motion</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         motion name.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TAnimata:draw"></a>
+    <strong>TAnimata:draw ([mode="VISIBLE"])</strong>
+    </dt>
+    <dd>
+    Draw the Animata.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">mode</span>
+         possible values: "VISIBLE", "INVISIBLE".
+         (<em>default</em> "VISIBLE")
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TAnimata:remove"></a>
+    <strong>TAnimata:remove ()</strong>
+    </dt>
+    <dd>
+    Remove the Animata.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TAnimata:set"></a>
+    <strong>TAnimata:set (...)</strong>
+    </dt>
+    <dd>
+    It sets an attribute.
+ This method can invoke any SET method of <a href="../modules/pl.html#TAnimata">TAnimata</a>.
+ Thus, setAbc(param1, param2, ...) is equal to set("ABC", param1, param2, ...).
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">...</span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TAnimata:setSpeed"></a>
+    <strong>TAnimata:setSpeed (speed)</strong>
+    </dt>
+    <dd>
+    Sets the speed of an Animata.  Note: You can also set the speed in the <a href="../modules/pl.html#lu.animations">attrs.lua</a> file.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">speed</span>
+            <span class="types"><span class="type">number</span></span>
+         speed in m/s.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TAnimata:setPosition"></a>
+    <strong>TAnimata:setPosition (x, y, z)</strong>
+    </dt>
+    <dd>
+    Sets the position of an Animata (except FPSBOTS).
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         x-coordinate of the position, in meters.
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><span class="type">number</span></span>
+         y-coordinate of the position, in meters.
+        </li>
+        <li><span class="parameter">z</span>
+            <span class="types"><span class="type">number</span></span>
+         z-coordinate of the position, in meters.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TAnimata:setRoute"></a>
+    <strong>TAnimata:setRoute (route, loopBegin, loopEnd)</strong>
+    </dt>
+    <dd>
+    Sets the route of an FPSBOT.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">route</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         indices (<a href="../modules/pl.html#lu.stops">lu.stops</a>) of the route stops.
+        </li>
+        <li><span class="parameter">loopBegin</span>
+            <span class="types"><span class="type">int</span></span>
+         index (route), where the loop starts.
+        </li>
+        <li><span class="parameter">loopEnd</span>
+            <span class="types"><span class="type">int</span></span>
+         index (route), where the loop ends.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TAnimata:setTeam"></a>
+    <strong>TAnimata:setTeam (team)</strong>
+    </dt>
+    <dd>
+    Sets the Team of an FPSBOT or an FPSPLAYER.
+ There are only 3 Teams, BLACK, RED and BLUE, the last two are enemies, while BLACK is neutral. By default all Animatas are BLACK.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">team</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         possible values: "BLACK", "RED", "BLUE".
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TAnimata:setAttack"></a>
+    <strong>TAnimata:setAttack (attack)</strong>
+    </dt>
+    <dd>
+    Sets the Attack of an FPSBOT.  There are only 2 types of attack the SHOOTER attack and the ZOMBIE attack.
+ In the SHOOTER attack the FPSBOT shoots the enemy.
+ In the ZOMBIE attack the FPSBOT pursues to wound and kill the enemy.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">attack</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         possible values: "SHOOTER", "ZOMBIE".
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TAnimata:setHealth"></a>
+    <strong>TAnimata:setHealth (health)</strong>
+    </dt>
+    <dd>
+    Sets the Health of the Animata.  By default the health of an Animata is 50.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">health</span>
+            <span class="types"><span class="type">int</span></span>
+
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TAnimata:setTexturePack"></a>
+    <strong>TAnimata:setTexturePack (texturePack)</strong>
+    </dt>
+    <dd>
+    Sets the texture pack of the Animata.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">texturePack</span>
+            <span class="types"><span class="type">int</span></span>
+         index of the texture pack. The index of the first pack, that is to say the original textures, is 0, the second pack is 1, and so on.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TAnimata:setInterpolation"></a>
+    <strong>TAnimata:setInterpolation (interpolation)</strong>
+    </dt>
+    <dd>
+    Sets the type of interpolation for the animation.
+ There are two types of interpolation, LINEAR and QUADRATIC.
+ The LINEAR interpolates between two frames, while the QUADRATIC, using a parabola, interpolates between three frames, the latter being the most expensive in calculations.
+ By default the interpolation type is QUADRATIC.
+ Note: When you create animation frames, think about the interpolation that will be used.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">interpolation</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         possible values: "LINEAR", "QUADRATIC".
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TAnimata:setMotion"></a>
+    <strong>TAnimata:setMotion (time, motion)</strong>
+    </dt>
+    <dd>
+    Sets the motion of the Animata.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">time</span>
+            <span class="types"><span class="type">number</span></span>
+         instant (seconds).
+        </li>
+        <li><span class="parameter">motion</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         motion name.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TAnimata:get"></a>
+    <strong>TAnimata:get (attr)</strong>
+    </dt>
+    <dd>
+    Gets the value of an attribute.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">attr</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         attribute name, possible values:<br>
+ <b>"INDEX"</b>: (return: <b>integer</b>) index. <br>
+ <b>"BODY"</b>: (return: <b><a href="../modules/pl.html#TBody">TBody</a></b>) Body. <br>
+ <b>"TEXTUREPACK"</b>: (return: <b>integer</b>) Texture Pack. <br>
+ <b>"MOTION"</b>: (return: <b>string</b>) Motion name. <br>
+ <b>"HEALTH"</b>: (return: <b>integer</b>) Health. <br>
+ <b>"RASTERPOS"</b>: (return: <b>number, number, number</b>) 3D position for gl.RasterPos or <a href="../modules/pl.html#lu.print3D">lu.print3D</a>. <br>
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TAnimata:putDirection"></a>
+    <strong>TAnimata:putDirection (time, dx, dy, dz)</strong>
+    </dt>
+    <dd>
+    It makes the Animata move in one direction.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">time</span>
+            <span class="types"><span class="type">number</span></span>
+         instant (seconds).
+        </li>
+        <li><span class="parameter">dx</span>
+            <span class="types"><span class="type">number</span></span>
+         x-coordinate of the direction.
+        </li>
+        <li><span class="parameter">dy</span>
+            <span class="types"><span class="type">number</span></span>
+         y-coordinate of the direction.
+        </li>
+        <li><span class="parameter">dz</span>
+            <span class="types"><span class="type">number</span></span>
+         z-coordinate of the direction.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TAnimata:putNavigation"></a>
+    <strong>TAnimata:putNavigation (time, right, forward, up)</strong>
+    </dt>
+    <dd>
+    It makes the FPSPLAYER or the THIRDPLAYER move in one direction in terms of the Right, Forward and Up vectors of the <a href="../modules/pl.html#lu.perspective">Perspective</a>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">time</span>
+            <span class="types"><span class="type">number</span></span>
+         instant (seconds).
+        </li>
+        <li><span class="parameter">right</span>
+            <span class="types"><span class="type">number</span></span>
+         right-coordinate.
+        </li>
+        <li><span class="parameter">forward</span>
+            <span class="types"><span class="type">number</span></span>
+         forward-coordinate.
+        </li>
+        <li><span class="parameter">up</span>
+            <span class="types"><span class="type">number</span></span>
+         up-coordinate.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TAnimata:reduceHealth"></a>
+    <strong>TAnimata:reduceHealth ([damage=1])</strong>
+    </dt>
+    <dd>
+    Reduce the Health.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">damage</span>
+            <span class="types"><span class="type">int</span></span>
+         amount to reduce.
+         (<em>default</em> 1)
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TAnimata:removeBody"></a>
+    <strong>TAnimata:removeBody ()</strong>
+    </dt>
+    <dd>
+    Remove the Body.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "TAnimata:nextTexturePack"></a>
+    <strong>TAnimata:nextTexturePack ()</strong>
+    </dt>
+    <dd>
+    Use the next Texture Pack.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.stops"></a>
+    <strong>lu.stops</strong>
+    </dt>
+    <dd>
+    This object represents the Stops.  The Stops are positions used by the routes of the <a href="../modules/pl.html#lu.animatas:add">FPSBOTS</a>.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.stops:add"></a>
+    <strong>lu.stops:add (x, y, z)</strong>
+    </dt>
+    <dd>
+    Add a Stop.  The first Stop added has index 0 in <a href="../modules/pl.html#lu.stops">lu.stops</a>, the second has index 1, and so on.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         x-coordinate of the Stop, in meters.
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><span class="type">number</span></span>
+         y-coordinate of the Stop, in meters.
+        </li>
+        <li><span class="parameter">z</span>
+            <span class="types"><span class="type">number</span></span>
+         z-coordinate of the Stop, in meters.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.stops:clear"></a>
+    <strong>lu.stops:clear ()</strong>
+    </dt>
+    <dd>
+    Clear all Stops.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.holes"></a>
+    <strong>lu.holes</strong>
+    </dt>
+    <dd>
+    This object represents the Holes.  The Holes are the marks of bullet impacts on Bodies.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.holes:init"></a>
+    <strong>lu.holes:init (formIndex)</strong>
+    </dt>
+    <dd>
+    Initializes the Holes.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">formIndex</span>
+            <span class="types"><span class="type">int</span></span>
+         index of the Form that will be used as a Hole.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.holes:add"></a>
+    <strong>lu.holes:add (x, y, z, orientation)</strong>
+    </dt>
+    <dd>
+    Add a Hole in an position.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         x-coordinate of the position, in meters.
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><span class="type">number</span></span>
+         y-coordinate of the position, in meters.
+        </li>
+        <li><span class="parameter">z</span>
+            <span class="types"><span class="type">number</span></span>
+         z-coordinate of the position, in meters.
+        </li>
+        <li><span class="parameter">orientation</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         possible values: "X", "Y", "Z".
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.holes:draw"></a>
+    <strong>lu.holes:draw ()</strong>
+    </dt>
+    <dd>
+    Draw all Holes.
+
+
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="GL2D"></a>GL2D </h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "lu.gl2d"></a>
+    <strong>lu.gl2d</strong>
+    </dt>
+    <dd>
+    A set of 2D routines.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.gl2d.enter"></a>
+    <strong>lu.gl2d.enter ()</strong>
+    </dt>
+    <dd>
+    Enters 2D mode.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.gl2d.leave"></a>
+    <strong>lu.gl2d.leave ()</strong>
+    </dt>
+    <dd>
+    Leave 2D mode.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.gl2d.aim"></a>
+    <strong>lu.gl2d.aim ()</strong>
+    </dt>
+    <dd>
+    Draws a square of 9 pixels in the center of the <a href="../modules/pl.html#lu.box">lu.box</a>.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.gl2d.print"></a>
+    <strong>lu.gl2d.print (text, x, y[, font="GLUT_BITMAP_8_BY_13"[, aligment="LEFT"]])</strong>
+    </dt>
+    <dd>
+    Print a text.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">text</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+
+        </li>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">int</span></span>
+         x-coordinate, in pixels, from the <a href="../modules/pl.html#lu.box">lu.box</a>'s left edge.
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><span class="type">int</span></span>
+         y-coordinate, in pixels, from the <a href="../modules/pl.html#lu.box">lu.box</a>'s bottom edge.
+        </li>
+        <li><span class="parameter">font</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         possible values: "GLUT_BITMAP_8_BY_13", "GLUT_BITMAP_9_BY_15", "GLUT_BITMAP_TIMES_ROMAN_10", "GLUT_BITMAP_TIMES_ROMAN_24", "GLUT_BITMAP_HELVETICA_10", "GLUT_BITMAP_HELVETICA_12", "GLUT_BITMAP_HELVETICA_18".
+         (<em>default</em> "GLUT_BITMAP_8_BY_13")
+        </li>
+        <li><span class="parameter">aligment</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         possible values: "LEFT", "RIGHT", "CENTER".
+         (<em>default</em> "LEFT")
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="BOX"></a>BOX </h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "lu.box"></a>
+    <strong>lu.box</strong>
+    </dt>
+    <dd>
+    A specialized iup.glcanvasbox for the Engine.  It is null until <a href="../modules/pl.html#lu:createBox">lu:createBox</a> is called.
+
+
+    <h3>Fields:</h3>
+    <ul>
+        <li><span class="parameter">eReady</span>
+            <span class="types"><span class="type">func</span></span>
+        () called on ready
+        </li>
+        <li><span class="parameter">eResize</span>
+            <span class="types"><span class="type">func</span></span>
+        (width, height) called on resize
+        </li>
+        <li><span class="parameter">eAction</span>
+            <span class="types"><span class="type">func</span></span>
+        (x, y) called on redraw
+        </li>
+        <li><span class="parameter">eKeypress</span>
+            <span class="types"><span class="type">func</span></span>
+        (key, press) called on a keyboard event
+        </li>
+        <li><span class="parameter">eButton</span>
+            <span class="types"><span class="type">func</span></span>
+        (button, pressed, x, y, status) called on a mouse button event
+        </li>
+        <li><span class="parameter">eMotion</span>
+            <span class="types"><span class="type">func</span></span>
+        (x, y, status) called on a mouse move event
+        </li>
+        <li><span class="parameter">eWheel</span>
+            <span class="types"><span class="type">func</span></span>
+        (delta, x, y, status) called on a mouse wheel event
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.box:setMouseEventsFromDialog"></a>
+    <strong>lu.box:setMouseEventsFromDialog ()</strong>
+    </dt>
+    <dd>
+    Makes mouse events to be captured from the <a href="../modules/pl.html#lu.dialog">lu.dialog</a>.
+ This function is invalid until you call <a href="../modules/pl.html#lu:createBox">lu:createBox</a>.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.box:setMouseEventsFromBox"></a>
+    <strong>lu.box:setMouseEventsFromBox ()</strong>
+    </dt>
+    <dd>
+    Makes mouse events to be captured from the <a href="../modules/pl.html#lu.box">lu.box</a>.
+ This function is invalid until you call <a href="../modules/pl.html#lu:createBox">lu:createBox</a>.
+
+
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="DIALOG"></a>DIALOG </h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "lu.dialog"></a>
+    <strong>lu.dialog</strong>
+    </dt>
+    <dd>
+    A specialized iup.dialog for the Engine.  It is null until <a href="../modules/pl.html#lu:createDialog">lu:createDialog</a> is called.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.dialog:changeMode"></a>
+    <strong>lu.dialog:changeMode ()</strong>
+    </dt>
+    <dd>
+    Change the dialog mode between windowed or full screen.
+
+
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="FUNCTIONS"></a>FUNCTIONS </h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "lu:init"></a>
+    <strong>lu:init (arduinoPort)</strong>
+    </dt>
+    <dd>
+    Initializes the Engine.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">arduinoPort</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         Port name of the arduino board
+        </li>
+    </ul>
+
+
+    <h3>Raises:</h3>
+    If arduinoPort is nil, the <a href="../modules/pl.html#lu.arduino">lu.arduino</a> object will not be created, otherwise yes.
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">lu:init(<span class="string">"COM5"</span>)</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "lu:exit"></a>
+    <strong>lu:exit ()</strong>
+    </dt>
+    <dd>
+    Ends the Engine and releases internal memory.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.optimization"></a>
+    <strong>lu.optimization (kind, enable)</strong>
+    </dt>
+    <dd>
+    Enables/Disables an optimization.  Note: Use this function after <a href="../modules/pl.html#lu:init">lu:init</a>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">kind</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         possible values: <br>
+ <b>"PERSPECTIVE"</b>: Optimization that avoids making drawings or calculations (animation) of <a href="../modules/pl.html#lu.formatas">Formatas</a> or <a href="../modules/pl.html#lu.animatas">Animatas</a> that are not in the field of vision of <a href="../modules/pl.html#lu.perspective">Perpective</a>.
+ Disable this optimization if the game does not require <a href="../modules/pl.html#lu.perspective">Perspective</a>. By default this optimization is disabled.<br>
+ <b>"TEXTURE"</b>: Optimization that creates Mipmaps and performs trilineal filtering.
+ By default this optimization is disabled.<br>
+        </li>
+        <li><span class="parameter">enable</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         true (Enables), false(Disables).
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.loadTexture"></a>
+    <strong>lu.loadTexture (filename)</strong>
+    </dt>
+    <dd>
+    Loads a new Texture.  Texture format can be in BMP, PCX, PNG, TGA or JPG.
+ Note: For old graphics cards, it is recommended to make the texture dimension square and with power of 2 width/height: 64x64, 128x128, 256x256.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">filename</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the filename of the texture.
+        </li>
+    </ul>
+
+    <h3>Returns:</h3>
+    <ol>
+
+           <span class="types"><span class="type">int</span></span>
+        texture name to use with gl.BindTexture.
+    </ol>
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.print3D"></a>
+    <strong>lu.print3D (text[, font="GLUT_BITMAP_8_BY_13"], x, y, z)</strong>
+    </dt>
+    <dd>
+    Prints a Text in a 3D position.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">text</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         the Text.
+        </li>
+        <li><span class="parameter">font</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.4">string</a></span>
+         possible values: "GLUT_BITMAP_8_BY_13", "GLUT_BITMAP_9_BY_15", "GLUT_BITMAP_TIMES_ROMAN_10", "GLUT_BITMAP_TIMES_ROMAN_24", "GLUT_BITMAP_HELVETICA_10", "GLUT_BITMAP_HELVETICA_12", "GLUT_BITMAP_HELVETICA_18".
+         (<em>default</em> "GLUT_BITMAP_8_BY_13")
+        </li>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         x-coordinate of the position, in meters.
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><span class="type">number</span></span>
+         y-coordinate of the position, in meters.
+        </li>
+        <li><span class="parameter">z</span>
+            <span class="types"><span class="type">number</span></span>
+         z-coordinate of the position, in meters.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu:createBox"></a>
+    <strong>lu:createBox (boxParams, timerParams)</strong>
+    </dt>
+    <dd>
+    Create <a href="../modules/pl.html#lu.box">lu.box</a>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">boxParams</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         parameters to create the <a href="../modules/pl.html#lu.box">lu.box</a> (iup.glcanvasbox).
+        </li>
+        <li><span class="parameter">timerParams</span>
+            <span class="types"><a class="type" href="http://www.lua.org/manual/5.1/manual.html#5.5">table</a></span>
+         parameters to create a iup.timer that will update the <a href="../modules/pl.html#lu.box">lu.box</a>.
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">lu:createBox({buffer = <span class="string">"DOUBLE"</span>,  rastersize = <span class="string">'640x480'</span>,  cursor = <span class="string">'ARROW'</span>}, {time = <span class="number">10</span>,  run = <span class="string">"YES"</span>})</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "lu:createDialog"></a>
+    <strong>lu:createDialog (params)</strong>
+    </dt>
+    <dd>
+    Create <a href="../modules/pl.html#lu.dialog">lu.dialog</a>.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">params</span>
+         parameters to create lu.dialog (iup.dialog).
+        </li>
+    </ul>
+
+
+
+
+    <h3>Usage:</h3>
+    <ul>
+        <pre class="example">lu:createDialog{iup.vbox{lu.box; alignment = <span class="string">"ACENTER"</span>, gap=<span class="number">10</span>}; fullscreen = <span class="string">"No"</span>, title = <span class="string">"test"</span>}</pre>
+    </ul>
+
+</dd>
+    <dt>
+    <a name = "lu:play"></a>
+    <strong>lu:play ()</strong>
+    </dt>
+    <dd>
+    Run the application from <a href="../modules/pl.html#lu.dialog">lu.dialog</a>.
+
+
+
+
+
+
+
+</dd>
+</dl>
+    <h2 class="section-header "><a name="DRAWING_FUNCTIONS"></a>DRAWING FUNCTIONS </h2>
+
+    <dl class="function">
+    <dt>
+    <a name = "lu.MaxViewport"></a>
+    <strong>lu.MaxViewport ()</strong>
+    </dt>
+    <dd>
+    Maximizes the active viewport.  Note: When there are <a href="../modules/pl.html#lu.animatas">FPSBOTS</a>, is necessary to maximize the viewport, since the <a href="../modules/pl.html#lu.animatas">FPSBOTS</a> use small viewports.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.drawBackground"></a>
+    <strong>lu.drawBackground ()</strong>
+    </dt>
+    <dd>
+    Equivalent to gl.ClearColor(0.2, 0.4, 0.6, 0).
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.drawMargins"></a>
+    <strong>lu.drawMargins ()</strong>
+    </dt>
+    <dd>
+    Draw a grid in the XZ-Plane, and draw the X, Y, and Z axes.
+
+
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.drawPoint"></a>
+    <strong>lu.drawPoint (x, y, z)</strong>
+    </dt>
+    <dd>
+    Draw a point in a position.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">x</span>
+            <span class="types"><span class="type">number</span></span>
+         x-coordinate of the position, in meters.
+        </li>
+        <li><span class="parameter">y</span>
+            <span class="types"><span class="type">number</span></span>
+         y-coordinate of the position, in meters.
+        </li>
+        <li><span class="parameter">z</span>
+            <span class="types"><span class="type">number</span></span>
+         z-coordinate of the position, in meters.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.drawBox"></a>
+    <strong>lu.drawBox (xmin, xmax, ymin, ymax, zmin, zmax)</strong>
+    </dt>
+    <dd>
+    Draw a box.
+
+
+    <h3>Parameters:</h3>
+    <ul>
+        <li><span class="parameter">xmin</span>
+            <span class="types"><span class="type">number</span></span>
+         Min. x.
+        </li>
+        <li><span class="parameter">xmax</span>
+            <span class="types"><span class="type">number</span></span>
+         Max. x.
+        </li>
+        <li><span class="parameter">ymin</span>
+            <span class="types"><span class="type">number</span></span>
+         Min. y.
+        </li>
+        <li><span class="parameter">ymax</span>
+            <span class="types"><span class="type">number</span></span>
+         Max. y.
+        </li>
+        <li><span class="parameter">zmin</span>
+            <span class="types"><span class="type">number</span></span>
+         Min. z.
+        </li>
+        <li><span class="parameter">zmax</span>
+            <span class="types"><span class="type">number</span></span>
+         Max. z.
+        </li>
+    </ul>
+
+
+
+
+
+</dd>
+    <dt>
+    <a name = "lu.drawBulletsTraces"></a>
+    <strong>lu.drawBulletsTraces ()</strong>
+    </dt>
+    <dd>
+    Draw the Traces of the Bullets (shot by <a href="../modules/pl.html#lu.animatas">FPSPLAYER</a> and <a href="../modules/pl.html#lu.animatas">FPSBOTS</a>).
+
+
+
+
+
+
+
+</dd>
+</dl>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.3</a></i>
+<i style="float:right;">Last updated 2017-01-21 01:59:38 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
