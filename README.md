@@ -16,3 +16,6 @@ PlayLua Engine is a Lua-scriptable Game Engine to create 3D games (based on Open
 
 ## Official website
 Official website of PlayLua Engine: [PlayLua Engine](https://sites.google.com/site/cejtok/projects/playluaengine).
+
+## Documentation
+API Documentation: [PlayLua Engine API Documentation](https://cejtok.github.io/playluaengine/)
