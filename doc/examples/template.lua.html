@@ -1,0 +1,244 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<head>
+    <title>PlayLua Engine</title>
+    <link rel="stylesheet" href="../ldoc.css" type="text/css" />
+</head>
+<body>
+
+<div id="container">
+
+<div id="product">
+	<div id="product_logo"></div>
+	<div id="product_name"><big><b></b></big></div>
+	<div id="product_description"></div>
+</div> <!-- id="product" -->
+
+
+<div id="main">
+
+
+<!-- Menu -->
+
+<div id="navigation">
+<br/>
+<h1>PlayLua Engine</h1>
+
+
+
+
+<h2>Examples</h2>
+<ul class="nowrap">
+  <li><strong>template.lua</strong></li>
+  <li><a href="../examples/xxx.lua.html">xxx.lua</a></li>
+</ul>
+<h2>Modules</h2>
+<ul class="nowrap">
+  <li><a href="../index.html">playluaengine</a></li>
+</ul>
+
+</div>
+
+<div id="content">
+
+    <h2>template.lua</h2>
+<pre>
+<span class="comment">-- Sample 01: OpenGL
+</span><span class="comment">-- Author: Carlos E. Jimenez (cejtok@gmail.com)
+</span>
+
+<span class="global">require</span>(<span class="string">'playluaengine'</span>)
+
+ple:init()
+
+ple:createBox{buffer = <span class="string">"DOUBLE"</span>,  rastersize = <span class="string">'640x480'</span>,  cursor = <span class="string">'ARROW'</span>} <span class="comment">-- Create ple.box
+</span>
+xpos = <span class="number">0</span>
+ypos = <span class="number">0</span>
+zpos = <span class="number">0</span>
+
+xrot = <span class="number">0</span>
+yrot = <span class="number">0</span>
+zrot = <span class="number">0</span>
+
+texture = <span class="number">0</span>
+
+LightAmbient = {<span class="number">0.5</span>, <span class="number">0.5</span>, <span class="number">0.5</span>, <span class="number">1</span>}    <span class="comment">-- Ambient Light Values
+</span>LightDiffuse = {<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>}          <span class="comment">-- Diffuse Light Values
+</span>LightPosition = {<span class="number">0</span>, <span class="number">0</span>, <span class="number">2</span>, <span class="number">1</span>}         <span class="comment">-- Light Position
+</span>
+
+<span class="keyword">function</span> ple:getGLMatrix()
+  <span class="keyword">if</span> gl.GetConst(<span class="string">"MATRIX_MODE"</span>) == <span class="string">"PROJECTION"</span>
+   <span class="keyword">then</span> <span class="keyword">return</span> gl.GetArray(<span class="string">"PROJECTION_MATRIX"</span>)
+  <span class="keyword">end</span>
+  <span class="keyword">if</span> gl.GetConst(<span class="string">"MATRIX_MODE"</span>) == <span class="string">"MODELVIEW"</span>
+   <span class="keyword">then</span> <span class="keyword">return</span> gl.GetArray(<span class="string">"MODELVIEW_MATRIX"</span>)
+  <span class="keyword">end</span>
+  <span class="keyword">return</span> <span class="global">error</span>(<span class="string">"Unknown matrix mode = "</span> .. gl.GetConst(<span class="string">"MATRIX_MODE"</span>))
+<span class="keyword">end</span>
+
+
+<span class="keyword">function</span> ple:printGLMatrix()
+  <span class="keyword">local</span> a = ple:getGLMatrix()
+  <span class="global">print</span>(
+        gl.GetConst(<span class="string">"MATRIX_MODE"</span>) .. <span class="string">" MATRIX = {{"</span> ..
+        a[<span class="number">1</span>] .. <span class="string">','</span>  .. a[<span class="number">2</span>] .. <span class="string">','</span>  .. a[<span class="number">3</span>]  .. <span class="string">','</span> .. a[<span class="number">4</span>]  .. <span class="string">'}, {'</span> ..
+        a[<span class="number">5</span>] .. <span class="string">','</span>  .. a[<span class="number">6</span>] .. <span class="string">','</span>  .. a[<span class="number">7</span>]  .. <span class="string">','</span> .. a[<span class="number">8</span>]  .. <span class="string">'}, {'</span> ..
+        a[<span class="number">9</span>] .. <span class="string">','</span>  .. a[<span class="number">10</span>] .. <span class="string">','</span> .. a[<span class="number">11</span>] .. <span class="string">','</span> .. a[<span class="number">12</span>] .. <span class="string">'}, {'</span> ..
+        a[<span class="number">13</span>] .. <span class="string">','</span> .. a[<span class="number">14</span>] .. <span class="string">','</span> .. a[<span class="number">15</span>] .. <span class="string">','</span> .. a[<span class="number">16</span>] .. <span class="string">'}}'</span>
+        )
+<span class="keyword">end</span>
+
+
+<span class="keyword">function</span> ple.box.eResize(width, height)
+  gl.Viewport(<span class="number">0</span>, <span class="number">0</span>, width, height)
+
+  gl.MatrixMode(<span class="string">'PROJECTION'</span>)   <span class="comment">-- Select The Projection Matrix
+</span>  gl.LoadIdentity()             <span class="comment">-- Reset The Projection Matrix
+</span>  ple:printGLMatrix()
+
+  <span class="keyword">if</span> height == <span class="number">0</span> <span class="keyword">then</span> height = <span class="number">1</span> <span class="keyword">end</span>
+
+  glu.Perspective(<span class="number">80</span>, width/height, <span class="number">1</span>, <span class="number">5000</span>)
+
+
+  gl.MatrixMode(<span class="string">'MODELVIEW'</span>)    <span class="comment">-- Select The Model View Matrix
+</span>  gl.LoadIdentity()             <span class="comment">-- Reset The Model View Matrix
+</span>  ple:printGLMatrix()
+
+<span class="keyword">end</span>
+
+
+
+<span class="keyword">function</span> ple.box.eReady()
+  ple.chrono:reset()
+  ple.fpscounter:reset()
+
+  gl.ShadeModel(<span class="string">'SMOOTH'</span>)            <span class="comment">-- Enable Smooth Shading
+</span>  gl.ClearColor(<span class="number">0.2</span>, <span class="number">0.4</span>, <span class="number">0.6</span>, <span class="number">0.5</span>)  <span class="comment">-- Black Background
+</span>  gl.ClearDepth(<span class="number">1.0</span>)                 <span class="comment">-- Depth Buffer Setup
+</span>  gl.Enable(<span class="string">'DEPTH_TEST'</span>)            <span class="comment">-- Enables Depth Testing
+</span>  gl.DepthFunc(<span class="string">'LEQUAL'</span>)             <span class="comment">-- The Type Of Depth Testing To Do
+</span>  gl.Hint(<span class="string">'PERSPECTIVE_CORRECTION_HINT'</span>,<span class="string">'NICEST'</span>)
+
+  gl.Light(<span class="string">'LIGHT1'</span>, <span class="string">'AMBIENT'</span>, LightAmbient)        <span class="comment">-- Setup The Ambient Light
+</span>  gl.Light(<span class="string">'LIGHT1'</span>, <span class="string">'DIFFUSE'</span>, LightDiffuse)        <span class="comment">-- Setup The Diffuse Light
+</span>  gl.Light(<span class="string">'LIGHT1'</span>, <span class="string">'POSITION'</span>, LightPosition)      <span class="comment">-- Position The Light
+</span>
+  gl.Enable(<span class="string">'LIGHT1'</span>)
+
+  <span class="comment">--texture = ple.loadTexture('textures/box.jpg')
+</span><span class="keyword">end</span>
+
+
+
+<span class="keyword">function</span> ple.box.eScene(x, y)
+
+  <span class="keyword">local</span> t = ple.chrono:time()
+
+  gl.Clear(<span class="string">'COLOR_BUFFER_BIT,DEPTH_BUFFER_BIT'</span>) <span class="comment">-- Clear Screen And Depth Buffer
+</span>
+  <span class="keyword">if</span> (ple.keyboard[iup.K_UP] == <span class="number">1</span>) <span class="keyword">then</span> ypos = ypos + <span class="number">0.01</span> <span class="keyword">end</span>
+  <span class="keyword">if</span> (ple.keyboard[iup.K_DOWN] == <span class="number">1</span>) <span class="keyword">then</span> ypos = ypos - <span class="number">0.01</span> <span class="keyword">end</span>
+  <span class="keyword">if</span> (ple.keyboard[iup.K_LEFT] == <span class="number">1</span>) <span class="keyword">then</span> xpos = xpos - <span class="number">0.01</span> <span class="keyword">end</span>
+  <span class="keyword">if</span> (ple.keyboard[iup.K_RIGHT] == <span class="number">1</span>) <span class="keyword">then</span> xpos = xpos + <span class="number">0.01</span> <span class="keyword">end</span>
+
+  xrot = xrot + <span class="number">0.3</span>
+  yrot = yrot + <span class="number">0.3</span>
+  zrot = zrot + <span class="number">0.3</span>
+
+  gl.MatrixMode(<span class="string">'MODELVIEW'</span>)    <span class="comment">-- Select The Model View Matrix (An internal routine changes to projection matrix)
+</span>  gl.LoadIdentity()             <span class="comment">-- Reset The Model View Matrix
+</span>  <span class="comment">--ple:printGLMatrix()
+</span>
+
+  gl.Translate(xpos, ypos, -<span class="number">5</span>)
+  gl.Rotate(xrot, <span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>)
+  gl.Rotate(yrot, <span class="number">0</span>,<span class="number">1</span>,<span class="number">0</span>)
+  gl.Rotate(zrot, <span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>)
+
+
+  gl.Color(<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>)
+  gl.Color(<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>)
+
+  <span class="comment">--gl.Enable('LIGHTING')
+</span>gl.Disable(<span class="string">'TEXTURE_2D'</span>)
+
+  <span class="comment">--gl.BindTexture('TEXTURE_2D', texture)
+</span>
+  gl.Begin(<span class="string">'QUADS'</span>)
+
+    <span class="comment">-- Front Face
+</span>    gl.Normal( <span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>)                      <span class="comment">-- Normal Pointing Towards Viewer
+</span>    gl.Color(<span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>)
+    gl.Vertex(-<span class="number">1</span>, -<span class="number">1</span>,  <span class="number">1</span>)  <span class="comment">-- Point 1 (Front)
+</span>    gl.Color(<span class="number">0</span>, <span class="number">1</span>, <span class="number">0</span>)
+    gl.Vertex( <span class="number">1</span>, -<span class="number">1</span>,  <span class="number">1</span>)  <span class="comment">-- Point 2 (Front)
+</span>    gl.Color(<span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>)
+    gl.Vertex( <span class="number">1</span>,  <span class="number">1</span>,  <span class="number">1</span>)  <span class="comment">-- Point 3 (Front)
+</span>    gl.Color(<span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>)
+    gl.Vertex(-<span class="number">1</span>,  <span class="number">1</span>,  <span class="number">1</span>)  <span class="comment">-- Point 4 (Front)
+</span>
+  gl.End()
+
+
+  gl.Disable(<span class="string">'LIGHTING'</span>)
+
+  ple.gl2d.enter()
+  gl.Color(<span class="number">1</span>, <span class="number">1</span>, <span class="number">1</span>)
+  ple.gl2d.<span class="global">print</span>(<span class="string">"Reset position (Box): Left-Click "</span>,  <span class="number">0</span>,<span class="number">50</span>, <span class="string">'GLUT_BITMAP_8_BY_13'</span>, <span class="string">'LEFT'</span>)
+  ple.gl2d.<span class="global">print</span>(<span class="string">"Move (Box): Up, Down, Left, Right"</span>,  <span class="number">0</span>,<span class="number">35</span>, <span class="string">'GLUT_BITMAP_8_BY_13'</span>, <span class="string">'LEFT'</span>)
+  ple.gl2d.<span class="global">print</span>(<span class="string">"Screen Mode: F1"</span>,              <span class="number">0</span>,<span class="number">20</span>, <span class="string">'GLUT_BITMAP_8_BY_13'</span>, <span class="string">'LEFT'</span>)
+  ple.gl2d.<span class="global">print</span>(ple.fpscounter.watch().. <span class="string">' FPS'</span>, <span class="number">0</span>,<span class="number">5</span>,  <span class="string">'GLUT_BITMAP_8_BY_13'</span>, <span class="string">'LEFT'</span>)
+  ple.gl2d.leave()
+
+<span class="keyword">end</span>
+
+
+
+<span class="keyword">function</span> ple.box.eKeypress(key, press)
+  <span class="keyword">if</span> (press == <span class="number">1</span>) <span class="keyword">and</span> (key == iup.K_ESC)
+   <span class="keyword">then</span>
+        <span class="keyword">return</span> ple:exit()
+  <span class="keyword">end</span>
+
+  <span class="keyword">if</span> (press == <span class="number">1</span>) <span class="keyword">and</span> (key == iup.K_F1)
+   <span class="keyword">then</span>
+        ple.dialog:changeMode()
+  <span class="keyword">end</span>
+
+<span class="keyword">end</span>
+
+
+
+<span class="keyword">function</span> ple.box.eButton(button, press, x, y, status)
+ <span class="keyword">if</span> (press == <span class="number">1</span>) <span class="keyword">and</span> (button == iup.BUTTON1)
+  <span class="keyword">then</span>
+       xpos, ypos = <span class="number">0</span>, <span class="number">0</span>
+ <span class="keyword">end</span>
+<span class="keyword">end</span>
+
+
+<span class="keyword">function</span> ple.box.eWheel(delta, x, y, status)
+<span class="keyword">end</span>
+
+
+
+
+ple:createDialog{iup.vbox{ple.box; alignment = <span class="string">"ACENTER"</span>, gap=<span class="number">10</span>}; fullscreen = <span class="string">'No'</span>, title = <span class="string">'Sample 01: OpenGL'</span>}
+
+ple:play()</pre>
+
+
+</div> <!-- id="content" -->
+</div> <!-- id="main" -->
+<div id="about">
+<i>generated by <a href="http://github.com/stevedonovan/LDoc">LDoc 1.4.6</a></i>
+<i style="float:right;">Last updated 2017-04-26 11:41:02 </i>
+</div> <!-- id="about" -->
+</div> <!-- id="container" -->
+</body>
+</html>
